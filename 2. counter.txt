@@ -62,3 +62,13 @@ var createCounter = function(n) {
  * counter() // 11
  * counter() // 12
  */
+
+ Notes:
+ the value of n persists between calls becasue of the closure formed by the inner function. Becasue o the closure even after the outer function
+ has completed eecution , javascript remembers the value of n. It will persis as long as the inner function exists. To reset n you have
+ to reassign the unction to a different variable or reassign the vlaue.
+ let counter = createCounter(10);
+ in this line we are calling createCounter unction with a parameter 10 and the returned value is assignm=ned to the counter variable.
+ Here the returned value is a variale so we are just assigning the innerfunction to the variable counter. So everytime counter() is called the 
+ inner function will get executed. Due to the closure formed by the inner function over the outer function the value of n persists and increments
+ everytime counter is called.
