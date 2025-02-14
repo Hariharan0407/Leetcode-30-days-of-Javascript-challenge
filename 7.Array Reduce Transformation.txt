@@ -77,3 +77,13 @@ var reduce = function(nums, fn, init) {
     }
     return val;
 };
+
+solution 3:
+Using for of loop
+var reduce = function(nums, fn, init) {
+    let val = init;
+    for(let num of nums){
+        val = fn(val,num)
+    }
+    return val;
+};
