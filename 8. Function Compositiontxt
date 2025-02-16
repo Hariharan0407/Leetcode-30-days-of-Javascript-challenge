@@ -52,3 +52,16 @@ var compose = function(functions) {
         return intVal
     } 
 };
+
+Solution 2
+by using the reduce method for arrays
+var compose = function(functions) {
+    return function(x) {return functions.reduceRight((accumulator, fn)=> fn(accumulator), x);
+    }
+};
+
+Solution 3:
+with arrow function instead o function keyword
+var compose = function(functions) {
+    return x => functions.reduceRight((accumulator, fn)=> fn(accumulator), x)
+};
